@@ -2,7 +2,7 @@ services:
   - type: web
     name: shopify-admin-mcp
     runtime: node
-    plan: starter            # free plan sleeps after inactivity and the first call will time out
+    plan: free               # free tier: sleeps after ~15 min of inactivity; first call after sleep is slow
     buildCommand: npm ci --omit=dev
     startCommand: npm start
     healthCheckPath: /healthz
